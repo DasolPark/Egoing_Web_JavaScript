@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" value="Move1" onclick="moveFunc1();" />
+    <input type="button" value="Move2" onclick="moveFunc2();" />
+    <input type="button" value="Reload1" onclick="reLoad1();" />
+    <input type="button" value="Reload2" onclick="reLoad2();" />
+    <script>
+      function moveFunc1() {
+        location.href = "https://www.google.com.hk/";
+      }
+      function moveFunc2() {
+        location = "https://www.google.com.hk/";
+      }
+      function reLoad1() {
+        location.href = location.href;
+      }
+      function reLoad2() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
