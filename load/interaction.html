@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" value="open" onclick="winopen();" />
+    <input type="text" onkeypress="winmessage(this.value)" />
+    <input type="button" value="close" onclick="winclose()" />
+    <script>
+      const winopen = () => {
+        win = window.open(
+          "interaction2.html",
+          "ot",
+          "width=300px, height=500px"
+        );
+      };
+      const winmessage = msg => {
+        win.document.getElementById("message").innerText = msg;
+      };
+      const winclose = () => {
+        win.close();
+      };
+    </script>
+  </body>
+</html>

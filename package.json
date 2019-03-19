@@ -1,0 +1,23 @@
+{
+  "name": "web_javascript",
+  "version": "1.0.0",
+  "description": "Study Web JavaScript like a boss",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DasolPark/Web_JavaScript.git"
+  },
+  "author": "David Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DasolPark/Web_JavaScript/issues"
+  },
+  "homepage": "https://github.com/DasolPark/Web_JavaScript#readme",
+  "scripts": {
+    "start": "nodemon --exec app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
