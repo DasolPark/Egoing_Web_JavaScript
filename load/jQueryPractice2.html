@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul>
+      <li class="active">HTML</li>
+      <li id="active">CSS</li>
+      <li class="active">JavaScript</li>
+      <input
+        type="button"
+        value="AllChange"
+        onclick="$('li').css('color', 'blue');"
+      />
+      <input
+        type="button"
+        value="ClassChange"
+        onclick="$('.active').css('color', 'orange');"
+      />
+      <input
+        type="button"
+        value="IdChange"
+        onclick="$('#active').css('color', 'purple').css('textDecoration', 'underline');"
+      />
+    </ul>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
