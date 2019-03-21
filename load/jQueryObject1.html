@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <script>
+      $(document).ready(function($) {
+        var li = $("li");
+        console.log(li);
+        for (var i = 0; i < li.length; i++) {
+          console.log(li[i]); //jQuery Object
+          console.log(li[i].constructor); // DOM
+          console.log(li[i].css("color", "red")); // Impossible
+          console.log($(li).css("color", "blue")); // Possible
+        }
+      });
+    </script>
+  </body>
+</html>
