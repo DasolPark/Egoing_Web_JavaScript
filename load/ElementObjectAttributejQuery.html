@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a id="jQueryAttr1" href="./ElementObjectAttribute.html"></a>
+    <input id="jQueryAttr2" type="checkbox" checked="checked" />
+    <div id="t1">opentutorials</div>
+    <div id="t2">opentutorials</div>
+    <script>
+      // 1. attr, removeAttr
+      var jqa1 = $("#jQueryAttr1");
+      console.log(jqa1.attr("href"));
+      jqa1.attr("title", "jQueryAttribute");
+      console.log(jqa1.attr("title"));
+      jqa1.removeAttr("title");
+      console.log(jqa1.attr("title"));
+
+      // 2-1. .attr VS .prop
+      console.log(jqa1.attr("href")); // Just Value Path
+      console.log(jqa1.prop("href")); // All Path
+      var jqa2 = $("jQueryAttr2");
+      console.log(jqa2.attr("checked")); // checked
+      console.log(jqa2.prop("checked")); // true
+
+      // 2-2.
+      $("#t1").prop("className", "important");
+      $("#t2").prop("class", "current");
+    </script>
+  </body>
+</html>
