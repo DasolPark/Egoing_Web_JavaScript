@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a id="target" href="https://www.google.com">google</a>
+    <p id="hello">Hello world</p>
+    <a id="eos" href="./ElementObjectSearch.html">EOS</a>
+    <script>
+      //*Attribute
+
+      var t = document.getElementById("target");
+      console.log(t.getAttribute("href"));
+      t.setAttribute("title", "https://www.naver.com");
+      console.log(t.getAttribute("title"));
+      console.log(t.hasAttribute("title"));
+      t.removeAttribute("title");
+      console.log(t.hasAttribute("title"));
+
+      //Attribute VS property
+      // 1
+      var h = document.getElementById("hello");
+      // Attribute method
+      h.setAttribute("class", "important");
+      // Property method
+      h.className = "important";
+
+      // 2
+      // All Path http://localhost/webjs/ElementObjectSearch.html
+      var eos = document.getElementById("eos");
+      console.log("eos.getAttribute('href')", target.getAttribute("href")); // relative path URL(just value)
+      // ./ElementObjectSearch.html
+      console.log("eos.href", eos.href); // All Path
+      // http://localhost/webjs/ElementObjectSearch.html
+    </script>
+  </body>
+</html>
