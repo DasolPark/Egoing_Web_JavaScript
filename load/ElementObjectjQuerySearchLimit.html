@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li class="marked">html</li>
+      <li>css</li>
+      <li id="active">
+        JavaScript
+        <ul>
+          <li>JavaScript Core</li>
+          <li class="marked">DOM</li>
+          <li class="marked">BOM</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      //1. Selector Context
+
+      $(".marked", "#active").css("color", "red");
+      $("#active .marked").css("color", "blue");
+
+      //2. .find()
+
+      $("#active")
+        .find(".marked")
+        .css("background-color", "blue");
+      $("#active")
+        .css("color", "blue")
+        .find(".marked")
+        .css("background-color", "red");
+    </script>
+  </body>
+</html>
