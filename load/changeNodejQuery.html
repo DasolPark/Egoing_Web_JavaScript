@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul id="target">
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+    <div class="target">content1</div>
+    <div class="target">content2</div>
+    <div class="target2">content3</div>
+    <div class="target3">content4</div>
+    <div class="target4">content5</div>
+    <div class="target5">content6</div>
+    <div class="target6">mvmv</div>
+    <input type="button" onclick="jqAppnd()" value="jQueryAppend" />
+    <input type="button" onclick="allAppend()" value="jQueryAllAppend" />
+    <input type="button" onclick="rmvAndEmpt()" value="jQueryRmvAndEmpt" />
+    <input type="button" onclick="repl()" value="jQueryReplaceAllAndWith" />
+    <input type="button" onclick="cln()" value="jQueryClone" />
+    <input type="button" onclick="mv()" value="jQueryMove" />
+    <script>
+      // just append
+      function jqAppnd() {
+        var li = document.createElement("li");
+        var textMsg = document.createTextNode("hihi");
+        li.appendChild(textMsg);
+        $("#target").append(li);
+      }
+      // before, prepend, append, after
+      function allAppend() {
+        $(".target").before("<div>before</div>");
+        $(".target").after("<div>after</div>");
+        $(".target").prepend("<div>prepend</div>");
+        $(".target").append("<div>append</div>");
+      }
+      // remove, empty
+      function rmvAndEmpt() {
+        $(".target2").remove();
+        $(".target3").empty();
+      }
+      // replaceAll, replaceWith
+      function repl() {
+        $("<div>replaceAll</div>").replaceAll(".target4");
+        $(".target5").replaceWith("<div>replaceWith</div>");
+      }
+
+      // clone (수정 필요함. 오류 있음.)
+      function cln() {
+        $(".target4")
+          .clone()
+          .replaceAll(".target5");
+        $(".target3").replaceWith($(".target4").clone());
+      }
+      // move through append
+      function mv() {
+        $(".target4").append($(".target6"));
+      }
+    </script>
+  </body>
+</html>
