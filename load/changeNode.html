@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="target">
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+    <input type="button" onclick="appChld()" value="appendChild" />
+    <input type="button" onclick="insrtBf()" value="insertBefore" />
+    <input type="button" onclick="rmvChld()" value="removeChild" />
+    <input type="button" onclick="rplChld()" value="replaceChild" />
+    <script>
+      function appChld() {
+        var target = document.getElementById("target");
+        var li = document.createElement("li");
+        var textMsg = document.createTextNode("JavaScript");
+        li.setAttribute("id", "enemy");
+        li.appendChild(textMsg);
+        target.appendChild(li);
+      }
+
+      function insrtBf() {
+        var target = document.getElementById("target");
+        var li = document.createElement("li");
+        var textMsg = document.createTextNode("jQuery");
+        li.appendChild(textMsg);
+        target.insertBefore(li, target.firstChild.nextSibling);
+      }
+
+      function rmvChld() {
+        var enemy = document.getElementById("enemy");
+        enemy.parentNode.removeChild(enemy);
+      }
+
+      function rplChld() {
+        var target = document.getElementById("target");
+        var li = document.createElement("li");
+        var textMsg = document.createTextNode("Hello JS");
+        li.appendChild(textMsg);
+        target.replaceChild(li, target.firstChild.nextSibling);
+      }
+    </script>
+  </body>
+</html>
