@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="target">
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+    <input type="button" onclick="getInnerHTML()" value="getInnerHTML" />
+    <input type="button" onclick="setInnerHTML()" value="setInnerHTML" />
+    <input type="button" onclick="getOuterHTML()" value="getOuterHTML" />
+    <input type="button" onclick="setOuterHTML()" value="setOuterHTML" />
+    <input type="button" onclick="getInnerText()" value="getInnerText" />
+    <input type="button" onclick="setInnerText()" value="setInnerText" />
+    <input type="button" onclick="setBeforebegin()" value="setBeforebegin" />
+    <input type="button" onclick="setAfterbegin()" value="setAfterbegin" />
+    <input type="button" onclick="setBeforeend()" value="setBeforeend" />
+    <input type="button" onclick="setAfterend()" value="setAfterend" />
+    <script>
+      // innerHTML
+      function getInnerHTML() {
+        var target = document.getElementById("target");
+        alert(target.innerHTML);
+      }
+      function setInnerHTML() {
+        var target = document.getElementById("target");
+        target.innerHTML = "<li>JavaScript Core</li><li>html</li><li>css</li>";
+      }
+      // outerHTML
+      function getOuterHTML() {
+        var target = document.getElementById("target");
+        alert(target.outerHTML);
+      }
+      function setOuterHTML() {
+        var target = document.getElementById("target");
+        target.outerHTML = "<ol><li>JavaScript</li><li>html</li></ol>";
+      }
+      // innerText
+      function getInnerText() {
+        var target = document.getElementById("target");
+        alert(target.innerText);
+      }
+      function setInnerText() {
+        var target = document.getElementById("target");
+        target.innerText = "<li>Vanilla</li><li>JavaScript</li>";
+      }
+      // insertAdjacentHTML(beforebegin, afterbegin, beforeend, afterend)
+      function setBeforebegin() {
+        var target = document.getElementById("target");
+        target.insertAdjacentHTML("beforebegin", "<h1>beforebegin");
+      }
+      function setAfterbegin() {
+        var target = document.getElementById("target");
+        target.insertAdjacentHTML("afterbegin", "<li>afterbegin</li>");
+      }
+      function setBeforeend() {
+        var target = document.getElementById("target");
+        target.insertAdjacentHTML("beforeend", "<li>beforeend</li>");
+      }
+      function setAfterend() {
+        var target = document.getElementById("target");
+        target.insertAdjacentHTML("afterend", "<h1>afterend</h1>");
+      }
+    </script>
+  </body>
+</html>
