@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #target {
+        font-size: 30px;
+        border-bottom: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="target">JavaScript Everybody!</p>
+    <p>Data: <input type="text" id="dataSource" value="JavaScript" /></p>
+    <p>Start: <input type="text" id="start" value="5" /></p>
+    <p>End: <input type="text" id="end" value="5" /></p>
+    <p>
+      <input type="button" onclick="appndData()" value="appendData(data)" />
+      <input type="button" onclick="delData()" value="deleteData(start,end)" />
+      <input
+        type="button"
+        onclick="instData()"
+        value="insertData(start,data)"
+      />
+      <input
+        type="button"
+        onclick="replcData()"
+        value="replaceData(start,end,data)"
+      />
+      <input
+        type="button"
+        onclick="subStrData()"
+        value="substringData(start,end)"
+      />
+    </p>
+    <script>
+      var t = document.getElementById("target").firstChild; // 'firstChild' is key point!
+      var data = document.getElementById("dataSource");
+      var start = document.getElementById("start");
+      var end = document.getElementById("end");
+      function appndData() {
+        t.appendData(data.value); // 'value' is key point!
+      }
+      function delData() {
+        t.deleteData(start.value, end.value);
+      }
+      function instData() {
+        t.insertData(start.value, data.value);
+      }
+      function replcData() {
+        t.replaceData(start.value, end.value, data.value);
+      }
+      function subStrData() {
+        console.log(t.substringData(start.value, end.value));
+      }
+    </script>
+  </body>
+</html>
