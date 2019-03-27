@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul>
+      <li id="target">html</li>
+      <li>css</li>
+      <li>JavaScript</li>
+    </ul>
+    <script>
+      var t = document.getElementById("target");
+      console.log(t.firstChild.nodeValue);
+      console.log(t.firstChild.data);
+      t.firstChild.nodeValue = "HTML";
+      console.log(t.firstChild.nodeValue);
+      t.firstChild.data = "html";
+      console.log(t.firstChild.data);
+    </script>
+  </body>
+</html>
