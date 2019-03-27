@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello JS</title>
+  </head>
+  <body>
+    <input type="button" onclick="documentObj()" value="DocumentObject" />
+    <script>
+      function documentObj() {
+        console.log(document.title);
+        console.log(document.URL);
+        console.log(document.URL.split("/dpsc6/")[0]);
+        console.log(document.URL.split("/dpsc6/")[1]);
+        console.log(document.referrer);
+        console.log(document.lastModified);
+      }
+    </script>
+  </body>
+</html>
