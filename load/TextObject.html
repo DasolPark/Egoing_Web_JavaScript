@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="target1"><span>opentutorials</span></p>
+    <p id="target2">
+      <span>opentutorials</span>
+    </p>
+    <script>
+      t1 = document.getElementById("target1");
+      t2 = document.getElementById("target2");
+      console.log(t1);
+      console.log(t1.firstChild.firstChild.nodeValue);
+      console.log(t1.firstChild);
+      console.log(t2);
+      console.log(t2.firstChild);
+      console.log(t2.firstChild.nextSibling);
+      console.log(t2.firstChild.nextSibling.firstChild.nodeValue);
+    </script>
+  </body>
+</html>
