@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- Not This -->
+    <input
+      type="button"
+      id="target"
+      onclick="alert('Hello World, '+document.getElementById('target').value)"
+      value="NotInline"
+    />
+    <!-- Occur Error from same ID -->
+    <!-- <input
+      type="button"
+      id="target"
+      onclick="alert('Hello World, '+document.getElementById('target').value)"
+      value="NotInline"
+    /> -->
+
+    <!-- This -->
+    <input
+      type="button"
+      id="target1"
+      onclick="alert('Hello World, '+this.value)"
+      value="This"
+    />
+  </body>
+</html>

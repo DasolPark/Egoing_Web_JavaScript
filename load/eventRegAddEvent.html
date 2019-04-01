@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" id="target1" value="general" />
+    <input type="button" id="target2" value="under ie8" />
+    <input type="button" id="target3" value="overlap" />
+    <input type="button" id="target4" value="plural" />
+    <script>
+      // General addEventListener
+      var t1 = document.getElementById("target1");
+      t1.addEventListener("click", function(event) {
+        alert("Hello World, " + event.target.value);
+      });
+
+      //   under ie8
+      var t2 = document.getElementById("target2");
+      if (t2.addEventListener) {
+        t2.addEventListener("click", function(event) {
+          alert("Hello World, " + event.target.value);
+        });
+      } else if (t2.attachEvent) {
+        t2.attachEvent("onclick", function(event) {
+          alert("Hello World, " + event.target.value);
+        });
+      }
+
+      // Overlap Event Use
+      var t3 = document.getElementById("target3");
+      t3.addEventListener("click", function(event) {
+        alert(1);
+      });
+      t3.addEventListener("click", function(event) {
+        alert(2);
+      });
+
+      // Plural addEventListener
+      var t4 = document.getElementById("target4");
+      function btnListener(event) {
+        switch (event.target.id) {
+          case "target3":
+            alert("target3");
+            break;
+          case "target4":
+            alert("target4");
+            break;
+        }
+      }
+      t3.addEventListener("click", btnListener);
+      t4.addEventListener("click", btnListener);
+    </script>
+  </body>
+</html>
