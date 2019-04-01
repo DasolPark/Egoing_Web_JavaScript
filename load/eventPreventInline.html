@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+      <!-- inline method -->
+    <p><h4>Inline method</h4>
+      <label>Prevent Event On</label>
+      <input type="checkbox" id="prevent" name="eventprevent" value="on" />
+    </p>
+    <p>
+      <a
+        href="https://google.com"
+        onclick="if(document.getElementById('prevent').checked) return false;"
+        >Google</a
+      >
+    </p>
+    <p>
+        <form action="https://google.com" onsubmit="if(document.getElementById('prevent').checked) return false;">
+            <input type="submit" value="submit">
+        </form>
+    </p>
+    </script>
+  </body>
+</html>
