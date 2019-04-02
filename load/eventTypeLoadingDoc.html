@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // 1.window.onload
+      //   window.onload = function(event) {
+      //     var vj = document.getElementById("vj");
+      //     console.log(vj.innerText);
+      //   };
+
+      // 2.window.addEventListener('load', function(){})
+      //   window.addEventListener("load", function(event) {
+      //     var vj = document.getElementById("vj");
+      //     console.log(vj.innerText);
+      //   });
+
+      // 3.DOMContentLoaded
+      window.addEventListener("DOMContentLoaded", function(event) {
+        var vj = document.getElementById("vj");
+        console.log(vj.innerText);
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <span id="vj">Vanilla JS</span>
+    </div>
+    <div>
+      <img src="./DOM Tree.png" />
+    </div>
+  </body>
+</html>

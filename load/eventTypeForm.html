@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="textArea"></div>
+    <form action="https://google.com">
+      <input type="text" id="id" />
+      <input type="submit" id="submit" />
+    </form>
+    <script>
+      var f = document.querySelector("form");
+      var id = document.getElementById("id");
+      var textArea = document.getElementById("textArea");
+
+      // Submit type
+      f.addEventListener("submit", function(event) {
+        if (id.value.length === 0) {
+          event.preventDefault();
+          alert("No field content");
+        }
+      });
+      // Change type
+      id.addEventListener("change", function(event) {
+        textArea.innerText = event.target.value;
+      });
+
+      // blur & focus type
+      id.addEventListener("blur", function(event) {
+        console.log("hello blur");
+      });
+      id.addEventListener("focus", function(event) {
+        console.log("hello focus");
+      });
+    </script>
+  </body>
+</html>
