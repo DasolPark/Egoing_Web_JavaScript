@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <input type="button" id="pure" value="Pure" />
+    <input type="button" id="jQuery" value="jQuery" />
+    <script>
+      // Vanilla JS
+      var target = document.getElementById("pure");
+      if (target.addEventListener) {
+        target.addEventListener("click", function(event) {
+          alert("Vanilla JS");
+        });
+      } else {
+        target.attachEvent("onclick", function(event) {
+          alert("Vanilla JS");
+        });
+      }
+
+      // jQuery
+      $("#jQuery").on("click", function(event) {
+        alert("jQuery");
+      });
+    </script>
+  </body>
+</html>
