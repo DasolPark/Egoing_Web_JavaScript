@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="target" />
+    </div>
+    <div>
+      <span id="result"></span>
+    </div>
+    <script>
+      // 1. 나열
+      //   $("#target").on("focus blur", function(e) {
+      //     $("#result").html(e.type);
+      //   });
+
+      // 2. Object?
+      //   var handler = function(e) {
+      //     $("#result").html(e.type);
+      //   };
+      //   $("#target").on({
+      //     'focus': handler,
+      //     'blur': handler
+      //   });
+
+      // 3. Chaining
+      var handler = function(e) {
+        $("#result").html(e.type);
+      };
+      $("#target")
+        .on("focus", handler)
+        .on("blur", handler);
+    </script>
+  </body>
+</html>

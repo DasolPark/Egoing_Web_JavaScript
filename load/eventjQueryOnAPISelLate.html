@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      // late binding
+      $("body").on("click", "a, li", function(event) {
+        event.preventDefault();
+        console.log(this.nodeName);
+      });
+    </script>
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JS</a></li>
+    </ul>
+    <script>
+      // selector
+      //   $("ul").on("click", "a, li", function(event) {
+      //     event.preventDefault();
+      //     console.log(this.nodeName);
+      //   });
+    </script>
+  </body>
+</html>

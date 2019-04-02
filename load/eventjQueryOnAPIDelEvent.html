@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <input type="text" id="target" />
+    <input type="button" id="remove" value="Remove" />
+    <div>
+      <span id="text"></span>
+    </div>
+    <script>
+      var handler = function(e) {
+        $("#text").html(e.type + Math.random());
+      };
+      $("#target").on("focus blur", handler);
+      $("#target").on("focus", function(e) {
+        console.log(e.type);
+      });
+      $("#remove").on("click", function(e) {
+        $("#target").off("focus", handler);
+      });
+    </script>
+  </body>
+</html>
