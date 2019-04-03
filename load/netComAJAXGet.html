@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <div><img src="./Layer.png" alt="Layer" /></div>
+      <button id="request">Learn more about Layer</button>
+      <div id="bio"></div>
+    </div>
+    <script>
+      var btn = document.getElementById("request");
+      var bio = document.getElementById("bio");
+      var textUrl = "http://localhost:8888/bioText";
+      var request = new XMLHttpRequest();
+
+      request.onreadystatechange = function() {
+        if (request.readyState === 4) {
+          bio.style.border = "3px solid black";
+          if (request.status === 200) {
+            bio.innerHTML = request.responseText;
+          } else {
+            bio.innerHTML =
+              "An error occured during your request: " +
+              request.status +
+              " " +
+              request.statusText;
+          }
+        }
+      };
+      //   request.setRequestHeader(
+      //     "Content-Type",
+      //     "application/x-www-form-urlencoded"
+      //   );
+      request.open("GET", textUrl);
+
+      btn.addEventListener("click", function() {
+        this.style.display = "none";
+        request.send();
+      });
+    </script>
+  </body>
+</html>
