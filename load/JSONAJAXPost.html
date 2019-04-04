@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div><span id="text"></span></div>
+    <input type="button" id="btn" value="JSON AJAX POST" />
+    <script>
+      var url = "http://localhost:8888/info";
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", loadDoc);
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("text").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("POST", url, true);
+        xhttp.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

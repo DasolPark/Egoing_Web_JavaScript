@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <div><span id="text"></span></div>
+      <button id="request">Learn JSON AJAX</button>
+      <div><span id="textAll"></span></div>
+    </div>
+    <script>
+      var btn = document.getElementById("request");
+      var text = document.getElementById("text");
+      var textAll = document.getElementById("textAll");
+      var content;
+      var textUrl = "http://localhost:8888/info";
+      var request = new XMLHttpRequest();
+
+      request.onreadystatechange = function() {
+        if (request.readyState === 4 && request.status === 200) {
+          content = request.responseText;
+          contentParse = JSON.parse(content);
+          //   console.log(JSON.parse(content));
+          //   console.log(JSON.stringify(content));
+
+          text.innerHTML = contentParse.name;
+          textAll.innerHTML = content;
+        }
+      };
+      request.open("GET", textUrl);
+
+      btn.addEventListener("click", function() {
+        request.send();
+      });
+    </script>
+  </body>
+</html>
