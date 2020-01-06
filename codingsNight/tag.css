@@ -1,0 +1,8 @@
+.inlineClass {
+  display: block;
+}
+
+.secondStr {
+  display: inline;
+  color: red;
+}
