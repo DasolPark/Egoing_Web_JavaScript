@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- UTF-8이 아니면 한글이 깨진다 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Table and List</title>
+    <link rel="stylesheet" href="tableAndList.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- list는 부모를 가지고 있다. (ul or ol) -->
+      <!-- 순서가 정해져있고, 양이 많다? ordered list인 ol을 쓰자 -->
+      <ol class="header__contentLists">
+        <li>
+          <a href="tag.html" target="_black">HTML</a>
+        </li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </header>
+    <main class="main">
+      <table class="main__table">
+        <!-- table row is <tr>-->
+        <tr>
+          <!-- table division is <td> -->
+          <td>1. HTML</td>
+          <td>99.8%</td>
+        </tr>
+        <tr>
+          <td>2. CSS</td>
+          <td>98.5%</td>
+        </tr>
+        <tr>
+          <td>3. JavaScript</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td>
+            4. TypeScript<br />
+            gooood
+          </td>
+          <td>50%</td>
+          <td>Up Up Up</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.header__contentLists {
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.main {
+  margin-left: 20px;
+}
+
+.main__table {
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+.main__table td {
+  border: 1px solid black;
+}

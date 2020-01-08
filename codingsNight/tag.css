@@ -1,3 +1,11 @@
+body {
+  display: flex;
+}
+
+.contentList {
+  width: 300px;
+}
+
 .inlineClass {
   display: block;
 }
