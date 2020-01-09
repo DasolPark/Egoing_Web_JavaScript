@@ -6,6 +6,23 @@ body {
   margin-top: 0px;
 }
 
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 a {
+  all: unset;
+  border: 2px solid black;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.header h1 a:hover {
+  background-color: red;
+}
+
 .header__contentLists {
   width: 1000px;
   display: flex;
@@ -16,6 +33,7 @@ body {
 }
 
 .main {
+  height: 100vh;
   margin-left: 20px;
 }
 
@@ -29,4 +47,17 @@ body {
 
 .main__table td {
   border: 1px solid black;
+}
+
+footer {
+  /* width: 1500px; */
+  width: 100vw;
+  border-top: 2px solid rgb(0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.2);
 }

@@ -10,14 +10,19 @@
   </head>
   <body>
     <header class="header">
+      <h1>
+        <a href="index.html" target="_black">
+          Web
+        </a>
+      </h1>
       <!-- list는 부모를 가지고 있다. (ul or ol) -->
       <!-- 순서가 정해져있고, 양이 많다? ordered list인 ol을 쓰자 -->
       <ol class="header__contentLists">
         <li>
-          <a href="tag.html" target="_black">HTML</a>
+          <a href="a.html" target="_black">HTML</a>
         </li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+        <li><a href="b.html" target="_black">CSS</a></li>
+        <li><a href="c.html" target="_black">JavaScript</a></li>
       </ol>
     </header>
     <main class="main">
@@ -45,6 +50,20 @@
           <td>Up Up Up</td>
         </tr>
       </table>
+
+      <marquee behavior="" direction="">이제는 사용하지 않는 태그 ㅎㅎ</marquee>
+      <form action="" id="jsFormTitle">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="jsTitleInput" />
+        <button>Submit</button>
+      </form>
+      <form action="" id="jsFormContent">
+        <label for="content">Content</label>
+        <input type="text" name="content" id="jsContentInput" />
+        <button>Submit</button>
+      </form>
     </main>
+    <footer>@ Copyright Dasol</footer>
+    <script src="tableAndList.js"></script>
   </body>
 </html>
