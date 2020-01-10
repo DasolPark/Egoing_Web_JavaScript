@@ -1,0 +1,14 @@
+{
+  "name": "codingsnight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tableAndList.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
